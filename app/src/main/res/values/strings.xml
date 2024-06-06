@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">RetroEmporium</string>
+    <string name="loginredirect"><u>Punya akun? Log in di sini!</u></string>
+    <string name="signupredirect"><u>Baru di sini? Buat akun!</u></string>
+    <string name="sharedprefskey" translatable="false">com.example.retroemporium.saved</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

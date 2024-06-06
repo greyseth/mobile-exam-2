@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ItemDetails"
+    android:background="@color/primary_col">
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:visibility="visible"
+        android:layout_margin="16dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"/>
+
+    <ScrollView
+        android:id="@+id/contentContainer"
+        android:visibility="gone"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/addBtn">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/itemImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/bg_round_corners"
+                android:clipToOutline="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_noimg" />
+
+            <TextView
+                android:id="@+id/itemNameDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Item Name Goes Here"
+                android:textColor="@color/secondary_col"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"/>
+            <TextView
+                android:id="@+id/itemPriceDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="$000,000,000"
+                android:textColor="@color/secondary_col"
+                android:textSize="22sp"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:id="@+id/itemDescriptionDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This is a detailed description of the item"
+                android:textColor="@color/secondary_col"
+                android:textSize="20sp"
+                android:layout_marginBottom="48dp"/>
+
+            <TextView
+                android:id="@+id/itemOrdersDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="0 Orang Telah Membeli produk ini"
+                android:textColor="@color/tertiary_col"
+                android:textAlignment="textEnd"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_margin="16dp"
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_circle_secondary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/icon_back" />
+    </LinearLayout>
+
+    <android.widget.Button
+        android:id="@+id/addBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/navbar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_button_secondary"
+        android:text="Tambah Ke Keranjang"
+        android:textAllCaps="false"
+        android:textColor="@color/tertiary_col"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/orderedNotif"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black_half"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_above="@id/navbar"
+        android:padding="16dp"
+        android:orientation="vertical"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_panel_primary"
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end">
+                <ImageView
+                    android:id="@+id/orderedNotifClose"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/icon_back"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/icon_check"
+                android:layout_marginBottom="16dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Item telah ditambahkan ke keranjang"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:textColor="@color/tertiary_col"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/navbar"
+        android:name="com.example.ecommerceapp.fragments.Navbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        tools:layout="@layout/fragment_navbar" />
+</RelativeLayout>

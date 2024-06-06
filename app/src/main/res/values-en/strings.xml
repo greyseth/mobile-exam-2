@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RetroEmporium</string>
+    <string name="loginredirect">Have An Account? Log In here!</string>
+    <string name="signupredirect">New Here? Sign up for an account!</string>
+</resources>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_button_secondary"
+    android:padding="8dp"
+    android:orientation="vertical"
+    android:layout_marginBottom="16dp">
+    <TextView
+        android:id="@+id/orderDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="00/00/0000"
+        android:textColor="@color/tertiary_col"
+        android:textSize="16sp"/>
+    <TextView
+        android:id="@+id/orderPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="$1,000,000"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/tertiary_col"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/tertiary_col"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/orderId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="Id: 0000"
+            android:textSize="14sp"
+            android:textColor="@color/tertiary_col"/>
+        <TextView
+            android:id="@+id/orderStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:text="Pending Payment"
+            android:textSize="14sp"
+            android:textColor="@color/tertiary_col"
+            android:textAlignment="textEnd"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</LinearLayout>

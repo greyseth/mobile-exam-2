@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary_col"
+    tools:context=".ItemsDisplay">
+
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_round_corners_secondary"
+        android:padding="8dp"
+        android:layout_margin="8dp"
+        android:gravity="center_vertical">
+        <EditText
+            android:id="@+id/searchInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_weight="1"
+            android:textColor="@color/tertiary_col"
+            android:hint="Cari Barang..."/>
+        <ImageButton
+            android:id="@+id/searchButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:background="@drawable/bg_circle_tertiary"
+            android:src="@drawable/icon_search"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/notFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Barang Tidak Ditemukan..."
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/tertiary_col"
+        android:textAlignment="center"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/search_bar"/>
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:visibility="visible"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="12dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/search_bar"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/itemsView"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/search_bar"
+        android:layout_above="@id/navbar"
+        android:padding="12dp"/>
+
+    <fragment
+        android:id="@+id/navbar"
+        android:name="com.example.ecommerceapp.fragments.Navbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        tools:layout="@layout/fragment_navbar" />
+
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="black_half">#80000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+<!--    Color Palette-->
+    <color name="primary_col">#FC4100</color>
+    <color name="secondary_col">#FFC55A</color>
+    <color name="tertiary_col">#00215E</color>
+</resources>
