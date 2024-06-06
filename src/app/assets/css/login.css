@@ -1,0 +1,31 @@
+.main-content.centered > h1 {
+  width: 100%;
+  text-align: center;
+}
+
+.login-panel {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  background-color: var(--secondary-color);
+  padding: 1em;
+  border-radius: 15px;
+  width: 50%;
+}
+.login-panel input {
+  display: inline;
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1em;
+}
+.login-panel input:not(input:last-child) {
+  margin-bottom: 1em;
+}
+.login-panel button {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  border: none;
+  padding: 1em;
+  font-size: 1em;
+  width: 100%;
+}

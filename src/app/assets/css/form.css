@@ -1,0 +1,36 @@
+.form input:not(input[type|="checkbox"]),
+.form textarea {
+  display: inline;
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1em;
+  margin-bottom: 1em;
+  border-radius: 10px;
+  border: none;
+  border-bottom: 2px solid var(--tertiary-color);
+  resize: vertical;
+}
+.form input[type|="checkbox"] {
+  padding: 0.5em;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+.form textarea {
+  font-size: 1.25em;
+}
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+}
+.form button {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  border: none;
+  padding: 1em;
+  font-size: 1em;
+  transition: 0.5s;
+}
+.form button:hover {
+  color: var(--primary-color);
+  background-color: var(--tertiary-color);
+}
